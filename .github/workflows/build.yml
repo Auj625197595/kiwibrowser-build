@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-20.04
+    runs-on: self-hosted
     timeout-minutes: 720
 
     steps:
@@ -82,7 +82,7 @@ jobs:
           sudo apt-get autoremove -y >/dev/null 2>&1 || true
           sudo apt-get autoclean -y >/dev/null 2>&1 || true
     - run: df -h
-    - run: java -version 
+    - run: java -version
     - run: sudo apt install ninja-build
     - run: $ROOT/script/download_ccache.sh
     - run: $ROOT/script/create_ccache_config.sh
