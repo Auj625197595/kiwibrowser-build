@@ -40,7 +40,6 @@ jobs:
     - run: free -m
     - run: df -h
     - run: java -version
-    - run: sudo apt install ninja-build
     - run: $ROOT/script/download_ccache.sh
     - run: $ROOT/script/create_ccache_config.sh
     - run: $ROOT/script/maximize_build_space.sh
