@@ -40,7 +40,6 @@ jobs:
     - run: free -m
     - run: df -h
     - run: java -version
-    - run: $ROOT/script/download_ccache.sh
     - run: $ROOT/script/create_ccache_config.sh
     - run: $ROOT/script/download_depot.sh
     - run: $ROOT/script/download_cipd.sh
