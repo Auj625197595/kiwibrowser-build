@@ -18,6 +18,9 @@ jobs:
         echo "CC=ccache clang -Qunused-arguments" >> $GITHUB_ENV
         echo "CXX=ccache clang++ -Qunused-arguments" >> $GITHUB_ENV
         echo "START_TIME=$(date '+%s')" >> $GITHUB_ENV
+        echo $PWD
+        export PWD=/mnt
+        echo $PWD
         mkdir -p "$PWD/run"
         echo "FLAG_STOP=$PWD/run/ninjaStop" >> $GITHUB_ENV
         echo "ROOT=$PWD" >> $GITHUB_ENV
@@ -37,9 +40,6 @@ jobs:
         java-version: '8'
 
     - run: lscpu
-    - run: echo $PWD
-    - run: export PWD=/mnt
-    - run: echo $PWD
     - run: free -m
     - run: df -h
     - run: sudo rm -rf /usr/local/share/boost /etc/apt/sources.list.d/* /usr/share/dotnet /usr/local/lib/android /opt/ghc
