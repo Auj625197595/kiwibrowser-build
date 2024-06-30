@@ -27,7 +27,7 @@ jobs:
          general_exclude: |-
            ^GCC$
            ^G\+\+$
-           Clang
+           Java/8
            LLVM
          docker_include: ".+"
          docker_prune: "True"
@@ -46,7 +46,7 @@ jobs:
          root-reserve-mb: 2048
          swap-size-mb: 1
          remove-dotnet: 'true'
-         remove-android: 'true'
+         remove-android: 'false'
          remove-haskell: 'true'
          remove-codeql: 'true'
          remove-docker-images: 'true'
